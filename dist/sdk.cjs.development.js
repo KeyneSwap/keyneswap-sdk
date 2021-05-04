@@ -20,9 +20,8 @@ var IPancakePair = _interopDefault(require('@pancakeswap-libs/pancake-swap-core/
 var _SOLIDITY_TYPE_MAXIMA;
 
 (function (ChainId) {
-  ChainId[ChainId["MAINNET"] = 56] = "MAINNET"; // MAINNET = 66,
-
-  ChainId[ChainId["BSCTESTNET"] = 65] = "BSCTESTNET";
+  ChainId[ChainId["MAINNET"] = 56] = "MAINNET";
+  ChainId[ChainId["OKT"] = 65] = "OKT";
 })(exports.ChainId || (exports.ChainId = {}));
 
 (function (TradeType) {
@@ -36,8 +35,8 @@ var _SOLIDITY_TYPE_MAXIMA;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(exports.Rounding || (exports.Rounding = {}));
 
-var FACTORY_ADDRESS = '0x775d9D629712FFc30e64B6F5f3C6729C82c19d9B';
-var INIT_CODE_HASH = '0x0070534273c8f2b2a0421fd561e1262e8eff45fed2979edaf31329faee1c9751';
+var FACTORY_ADDRESS = '0xf2aC166D1aE1f12CE7E086E439278E8faA6e9E32';
+var INIT_CODE_HASH = '0x59327edb96e1bb120453ea0683e6339abdd77199f20363f6902e43691130ef51';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -370,7 +369,7 @@ function Currency(decimals, symbol, name) {
  * The only instance of the base class `Currency`.
  */
 
-Currency.ETHER = /*#__PURE__*/new Currency(18, 'BNB', 'Binance');
+Currency.ETHER = /*#__PURE__*/new Currency(18, 'OKB', 'OKEx');
 var ETHER = Currency.ETHER;
 
 var _WETH;
@@ -436,7 +435,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'), _WETH[exports.ChainId.BSCTESTNET] = /*#__PURE__*/new Token(exports.ChainId.BSCTESTNET, '0x1271a7623bCb52fa9851f3e603244658e662d511', 18, 'WETH', 'Wrapped Ether'), _WETH);
+var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WOK', 'Wrapped OK'), _WETH[exports.ChainId.OKT] = /*#__PURE__*/new Token(exports.ChainId.OKT, '0x8DeA2b1867c08EA1eb9c32A01b9ce6d5BcB3dA28', 18, 'WOKT', 'Wrapped OKT'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
