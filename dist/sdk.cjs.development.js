@@ -20,7 +20,7 @@ var IPancakePair = _interopDefault(require('@pancakeswap-libs/pancake-swap-core/
 var _SOLIDITY_TYPE_MAXIMA;
 
 (function (ChainId) {
-  ChainId[ChainId["MAINNET"] = 56] = "MAINNET";
+  ChainId[ChainId["MAINNET"] = 66] = "MAINNET";
   ChainId[ChainId["OKT"] = 65] = "OKT";
 })(exports.ChainId || (exports.ChainId = {}));
 
@@ -369,7 +369,7 @@ function Currency(decimals, symbol, name) {
  * The only instance of the base class `Currency`.
  */
 
-Currency.ETHER = /*#__PURE__*/new Currency(18, 'OKB', 'OKEx');
+Currency.ETHER = /*#__PURE__*/new Currency(18, 'OKT', 'OKEx');
 var ETHER = Currency.ETHER;
 
 var _WETH;
