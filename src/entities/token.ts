@@ -66,7 +66,7 @@ export const WETH = {
   ),
   [ChainId.OKT]: new Token(
     ChainId.OKT,
-    '0x8DeA2b1867c08EA1eb9c32A01b9ce6d5BcB3dA28',
+    '0x7c2e817E1E9d40C022c2f08804d3e67D07526f83',
     18,
     'WOKT',
     'Wrapped OKT'
